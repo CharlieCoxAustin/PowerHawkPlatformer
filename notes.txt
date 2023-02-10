@@ -1,0 +1,159 @@
+if(this.onPlatform == false)
+        {
+            if(this.x <= 700 && this.x >= 300)
+            {
+                c.drawImage(this.characterSprite, 0, 700, 300, 350, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+            }
+            else if(this.x >= 700)
+            {
+                c.drawImage(this.characterSprite, 0, 700, 300, 350, 700, this.y + this.yVelocity, 150, 150);
+            }
+            else if(this.x <= 300)
+            {
+                c.drawImage(this.characterSprite, 0, 700, 300, 350, 300, this.y + this.yVelocity, 150, 150);
+            }
+        }
+        else if(this.onPlatform == true && this.xVelocity == 0)
+        {
+            if(this.x <= 700 && this.x >= 300)
+            {
+                c.drawImage(this.characterSprite, 0, 0, 300, 350, this.x, this.y + this.yVelocity, 150, 150);
+            }
+            else if(this.x >= 700)
+            {
+                c.drawImage(this.characterSprite, 0, 0, 300, 350, 700, this.y + this.yVelocity, 150, 150);
+            }
+            else if(this.x <= 300)
+            {
+                c.drawImage(this.characterSprite, 0, 0, 300, 350, 300, this.y + this.yVelocity, 150, 150);
+            }
+        }
+        else if(this.onPlatform == true && this.xVelocity != 0)
+        {   
+            if(this.xVelocity > 0)
+            {
+                if(this.x <= 700 && this.x >= 300)
+                {
+                    if(this.spriteFrame == 0)
+                    {
+                        c.drawImage(this.characterSprite, 0, 0, 300, 350, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 1)
+                    {  //95
+                        c.drawImage(this.characterSprite, 301, 0, 300, 350, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 2)
+                    {
+                        c.drawImage(this.characterSprite, 601, 0, 300, 350, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 3)
+                    {
+                        c.drawImage(this.characterSprite, 301, 0, 300, 350, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+                    }
+                }
+                else if(this.x >= 700)
+                {
+                //keeping player on screen
+                    if(this.spriteFrame == 0)
+                    {
+                        c.drawImage(this.characterSprite, 0, 0, 300, 350, 700, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 1)
+                    {  //95
+                        c.drawImage(this.characterSprite, 301, 0, 300, 350, 700, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 2)
+                    {
+                        c.drawImage(this.characterSprite, 601, 0, 300, 350, 700, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 3)
+                    {
+                        c.drawImage(this.characterSprite, 301, 0, 300, 350, 700, this.y + this.yVelocity, 150, 150);
+                    }
+                }
+                else if(this.x <= 300)
+                {
+                //keeping player on screen
+                    if(this.spriteFrame == 0)
+                    {
+                        c.drawImage(this.characterSprite, 0, 0, 300, 350, 300, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 1)
+                    {  //95
+                        c.drawImage(this.characterSprite, 301, 0, 300, 350, 300, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 2)
+                    {
+                        c.drawImage(this.characterSprite, 601, 0, 300, 350, 300, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 3)
+                    {
+                        c.drawImage(this.characterSprite, 301, 0, 300, 350, 300, this.y + this.yVelocity, 150, 150);
+                    }
+                }
+            }
+            else if(this.xVelocity < 0)
+            {
+                if(this.x <= 700 && this.x >= 300)
+                {
+                    if(this.spriteFrame == 0)
+                    {
+                        c.drawImage(this.characterSprite, 0, 400, 300, 300, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 1)
+                    {  //95
+                        c.drawImage(this.characterSprite, 301, 400, 300, 300, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 2)
+                    {
+                        c.drawImage(this.characterSprite, 601, 400, 300, 300, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 3)
+                    {
+                        c.drawImage(this.characterSprite, 301, 400, 300, 300, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+                    }
+                }
+                else if(this.x >= 700)
+                {
+                    if(this.spriteFrame == 0)
+                    {
+                        c.drawImage(this.characterSprite, 0, 400, 300, 300, 700, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 1)
+                    {  //95
+                        c.drawImage(this.characterSprite, 301, 400, 300, 300, 700, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 2)
+                    {
+                        c.drawImage(this.characterSprite, 601, 400, 300, 300, 700, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 3)
+                    {
+                        c.drawImage(this.characterSprite, 301, 400, 300, 300, 700, this.y + this.yVelocity, 150, 150);
+                    }
+                }
+                else if(this.x <= 300)
+                {
+                    if(this.spriteFrame == 0)
+                    {
+                        c.drawImage(this.characterSprite, 0, 400, 300, 300, 300, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 1)
+                    {  //95
+                        c.drawImage(this.characterSprite, 301, 400, 300, 300, 300, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 2)
+                    {
+                        c.drawImage(this.characterSprite, 601, 400, 300, 300, 300, this.y + this.yVelocity, 150, 150);
+                    }
+                    else if(this.spriteFrame == 3)
+                    {
+                        c.drawImage(this.characterSprite, 301, 400, 300, 300, 300, this.y + this.yVelocity, 150, 150);
+                    }
+                }
+            }
+        }
+        else
+        {
+            c.drawImage(this.characterSprite, 0, 0, 300, 350, this.x + this.xVelocity, this.y + this.yVelocity, 150, 150);
+        }
