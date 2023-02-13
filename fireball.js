@@ -12,7 +12,7 @@ class Fireball
         this.fireX = x;
         this.fireY = y;
         this.picture = new Image();
-        this.picture.src = "fireball.png";
+        this.picture.src = "charlieThrowableChickenWing-01.png";
         this.sound = new Audio();
         this.sound.src = "explosion.wav";
 
