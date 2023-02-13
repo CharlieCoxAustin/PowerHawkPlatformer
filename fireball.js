@@ -14,7 +14,7 @@ class Fireball
         this.picture = new Image();
         this.picture.src = "charlieThrowableChickenWing-01.png";
         this.sound = new Audio();
-        this.sound.src = "explosion.wav";
+        this.sound.src = "whoosh.wav";
 
         this.sound.play();
 
