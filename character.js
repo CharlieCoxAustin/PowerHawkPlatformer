@@ -569,5 +569,17 @@ class Character{
         console.log("player's YV = " + this.yVelocity);
     }
 
+    checkIfFallen()
+    {
+        if(this.y >= 1000)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
 }

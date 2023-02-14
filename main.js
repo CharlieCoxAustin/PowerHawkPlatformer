@@ -24,7 +24,7 @@ function animate()
 {
     requestAnimationFrame(animate);
     c.clearRect(0,0,innerWidth,innerHeight);
-    if(theLevel.player.getY() > 1000) //this should be exported to a function in character class
+    if(theLevel.checkIfFallen() == true) //this should be exported to a function in character class
     {
         init();
     }

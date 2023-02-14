@@ -72,6 +72,18 @@ class Level
         }
     }
 
+    checkIfFallen() //check to see if player is dead
+    {
+        if(this.player.checkIfFallen() == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
 
 }
