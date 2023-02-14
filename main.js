@@ -9,16 +9,32 @@ console.log("running");
 console.log(canvas);
 
 let theLevel;
+let levelNum = 1;
 
-function init()
+function init(levelNum)
 {
     let playerImage = new Image();
     playerImage.src = "joeSpriteSheet-01.png";
-    theLevel = new LevelOne(500, 500, playerImage, 5460, 400);
+    switch(levelNum)
+    {
+        case 1:
+        {
+            theLevel = new LevelOne(500, 500, playerImage, 5460, 400);
+            break; 
+        }
+        case 2:
+        {
+            theLevel = new LevelTwo(500, 500, playerImage, 5460, 400);
+            break; 
+        }
+    }
+    
+    
+    //theLevel = new LevelOne(500, 500, playerImage, 5460, 400);
     theLevel.create();
 }
 
-init();
+init(levelNum);
 
 function animate()
 {
@@ -26,7 +42,7 @@ function animate()
     c.clearRect(0,0,innerWidth,innerHeight);
     if(theLevel.checkIfFallen() == true) //this should be exported to a function in character class
     {
-        init();
+        init(levelNum);
     }
     
     theLevel.executeMoves();
@@ -36,7 +52,12 @@ function animate()
     theLevel.checkForDeath();
     if(theLevel.checkForVictory())
     {
-        init();
+        levelNum++;
+        if(levelNum >= 3)
+        {
+            levelNum = 1;
+        }
+        init(levelNum);
     }
     
     theLevel.draw();
