@@ -27,6 +27,11 @@ function init(levelNum)
             theLevel = new LevelTwo(500, 500, playerImage, 5460, 400);
             break; 
         }
+        case 3:
+        {
+            theLevel = new LevelThree(500, 500, playerImage, 5460, 400);
+            break;
+        }
     }
     
     
@@ -53,7 +58,7 @@ function animate()
     if(theLevel.checkForVictory())
     {
         levelNum++;
-        if(levelNum >= 3)
+        if(levelNum >= 4)
         {
             levelNum = 1;
         }
