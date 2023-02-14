@@ -2,15 +2,26 @@ class FireballFactory
 {
     fireballArray;
     ourPlayer;
+    thrownBool;
 
     constructor(player)
     {
         this.fireballArray = [];
-        this.ourPlayer = player
+        this.ourPlayer = player;
+        this.thrownBool = false;
         
-        window.addEventListener("keydown", this.shootFireball.bind(this)
+        window.addEventListener("keydown", this.shootFireball.bind(this));
+        window.addEventListener("keyup", this.upHandler.bind(this));
         //this.fireballArray.push(new Fireball(player.getX() + 125, player.getY() - 50));
-        );
+        
+    }
+
+    upHandler(event)
+    {
+        if(event.key == "t")
+        {
+            this.thrownBool = false;
+        }
     }
 
     shootFireball(event)
@@ -18,12 +29,13 @@ class FireballFactory
         let x;
         let y;
 
-        if(event.key == "t")
+        if(event.key == "t" && this.thrownBool == false)
         {
             x = this.ourPlayer.getX();
             y = this.ourPlayer.getY();
             this.fireballArray.push(new Fireball(x + 75, y - 25));
             console.log("new throwable!");
+            this.thrownBool = true;
         }
         
     }
