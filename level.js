@@ -7,7 +7,7 @@ class Level
     player;
     theBadGuyFactory;
 
-    constructor(playerX, playerY, playerImage, endingX, endingY, fireballPicture)
+    constructor(playerX, playerY, playerImage, endingX, endingY)
     {   
         this.player = new Character(playerX,playerY,0,0,playerImage);
         this.theBackgroundFactory = new BackgroundFactory(this.player);
@@ -82,6 +82,34 @@ class Level
         {
             return false;
         }
+    }
+
+    checkIfKilled()
+    {
+        console.log("check if killed: ");
+        let currentX = this.player.getX() + 75;
+        let currentY = this.player.getY() + 75;
+        for(let i = 0; i < this.theBadGuyFactory.badGuyArray.length; ++i)
+        {
+            let badGuyX = this.theBadGuyFactory.badGuyArray[i].getX();
+            let badGuyY = this.theBadGuyFactory.badGuyArray[i].getY();
+            let badGuyHeight = this.theBadGuyFactory.badGuyArray[i].getHeight();
+            let badGuyWidth = this.theBadGuyFactory.badGuyArray[i].getWidth();
+            console.log("bad guy x and y= " + badGuyX + " " + badGuyY);
+            if(currentX >= badGuyX && currentX <= badGuyX + badGuyWidth)
+            {
+                if(currentY >= badGuyY && currentY <= badGuyY + badGuyHeight)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        console.log("currentX and Y = " + currentX + " " + currentY);
+
     }
 
 

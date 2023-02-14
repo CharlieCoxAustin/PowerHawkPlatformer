@@ -15,6 +15,7 @@ class Character{
     jumped;
     spriteFrame;
     frameCounter;
+    facingRight;
 
     //700
     //900
@@ -39,6 +40,7 @@ class Character{
         this.jumped = false;
         this.spriteFrame = 1;
         this.frameCounter = 0;
+        this.facingRight = true;
 
         
 
@@ -213,18 +215,35 @@ class Character{
             
             if(this.xVelocity == 0 && this.onPlatform == true) //condition for standing still
             {
-                //c.drawImage(this.characterSprite, 0, 0, 200, 235, this.x, this.y + this.yVelocity, 150, 150);
-                this.standStillLeft();
-            }
-            else if(this.onPlatform == false) //condition for being in the air.
-            {
-                if(this.xVelocity <= 0)
+                if(this.facingRight == false)
                 {
-                    this.jumpLeft();
+                    this.standStillLeft();
                 }
                 else
                 {
+                    this.standStillRight();
+                }
+            }
+            else if(this.onPlatform == false) //condition for being in the air.
+            {
+                if(this.xVelocity < 0)
+                {
+                    this.jumpLeft();
+                }
+                else if(this.xVelocity > 0)
+                {
                     this.jumpRight();
+                }
+                else
+                {
+                    if(this.facingRight == false)
+                    {
+                        this.jumpLeft();
+                    }
+                    else
+                    {
+                        this.jumpRight();
+                    }
                 }
             }
             else if(this.onPlatform == true && this.xVelocity > 0) // condition for running right.
@@ -240,11 +259,22 @@ class Character{
         {
             if(this.onPlatform == true)
             {
-            this.runRight();
+                this.runRight();
             }
             else
             {
                 this.jumpRight();
+            }
+        }
+        else if(this.x >= 700 && this.xVelocity == 0 && this.yVelocity == 0 && this.onPlatform == true)
+        {
+            if(this.facingRight == false)
+            {
+                this.standStillLeft();
+            }
+            else
+            {
+                this.standStillRight();
             }
         }
         else if(this.x >= 700 && this.onPlatform == false)
@@ -270,7 +300,14 @@ class Character{
             }
             else if(this.onPlatform == true && this.xVelocity == 0)
             {
-                this.standStillLeft();
+                if(this.facingRight == false)
+                {
+                    this.standStillLeft();
+                }
+                else
+                {
+                    this.standStillRight();
+                }
             }
         }
         else
@@ -413,12 +450,14 @@ class Character{
         {
             
             this.leftBool = true;
+            this.facingRight = false;
             
         }
         else if(event.key == "ArrowRight")
         {
             
             this.rightBool = true;
+            this.facingRight = true;
             
         }
         else if(event.key == "Backspace")
@@ -565,8 +604,6 @@ class Character{
         {
             this.jumped = false;
         }
-
-        console.log("player's YV = " + this.yVelocity);
     }
 
     checkIfFallen()

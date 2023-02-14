@@ -13,6 +13,7 @@ class BadGuy
     ourPlayer;
     fireBallArray;
     upBool;
+    spawned;
 
     constructor(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs)
     {
@@ -30,6 +31,7 @@ class BadGuy
         this.ourPlayer = player;
         this.fireBallArray = fireballs;
         this.upBool = false;
+        this.spawned = false;
     }
 
     draw()
@@ -106,11 +108,55 @@ class BadGuy
             
             if(fireballX >= this.x && fireballX <= this.x + this.width)
             {
-                if(fireballY >= this.y && fireballY <= this.y + this.height - 75)
+                if(fireballY >= this.y && fireballY <= this.y + this.height)
                 {
-                    this.deadBool = true;
+                    if(this.deadBool == false)
+                    {
+                        this.deadBool = true;
+                        this.fireBallArray[i].setXV(-5);
+                        this.fireBallArray[i].setYV(-5);
+                        let deathSound = new Audio();
+                        deathSound.src = "punch.wav";
+                        deathSound.volume = .1;
+                        deathSound.play();
+                    }
                 }
             }
         }
+    }
+
+    getX()
+    {
+        return this.x;
+    }
+
+    getY()
+    {
+        return this.y;
+    }
+
+    getWidth()
+    {
+        return this.width;
+    }
+
+    getHeight()
+    {
+        return this.height;
+    }
+
+    getDeadBool()
+    {
+        return this.deadBool;
+    }
+
+    setSpawned(newSpawned)
+    {
+        this.spawned = newSpawned;
+    }
+
+    getSpawned()
+    {
+        return this.spawned;
     }
 }

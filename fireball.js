@@ -6,6 +6,7 @@ class Fireball
     fireYV;
     picture;
     sound;
+    angle;
     
     constructor(x,y, image)
     {
@@ -17,16 +18,24 @@ class Fireball
         this.picture.src = image;
         this.sound = new Audio();
         this.sound.src = "explosion.wav";
+        this.angle = 1;
 
+        this.sound.volume = .1;
         this.sound.play();
 
     }
 
     draw()
     {
-        c.drawImage(this.picture, this.fireX + this.fireXV, this.fireY, 125, 125);
+        //c.drawImage(this.picture, this.fireX + this.fireXV, this.fireY, 125, 125);
         this.fireX += this.fireXV;
         this.gravity();
+        c.save();
+        c.translate(this.fireX, this.fireY);
+        c.rotate(this.angle * (Math.PI/4));
+        c.drawImage(this.picture, -63, -63, 125, 125);
+        c.restore();
+        this.angle++;
     }
 
     gravity()
@@ -48,6 +57,11 @@ class Fireball
     setXV(newXV)
     {
         this.fireXV = newXV;
+    }
+
+    setYV(newYV)
+    {
+        this.fireYV = newYV;
     }
 
     setPicture(newPic)

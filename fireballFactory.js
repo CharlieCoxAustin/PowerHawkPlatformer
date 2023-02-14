@@ -14,7 +14,6 @@ class FireballFactory
         
         window.addEventListener("keydown", this.shootFireball.bind(this));
         window.addEventListener("keyup", this.upHandler.bind(this));
-        //this.fireballArray.push(new Fireball(player.getX() + 125, player.getY() - 50));
         
     }
 

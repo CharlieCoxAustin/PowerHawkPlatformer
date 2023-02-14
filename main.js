@@ -4,12 +4,16 @@ var canvas = document.querySelector("canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 c = canvas.getContext("2d");
+a = new Audio();
+
 
 console.log("running");
+console.log("width and height: " + window.innerWidth + " " + window.innerHeight);
 console.log(canvas);
 
 let theLevel;
 let levelNum = 1;
+let newLevel;
 
 function init(levelNum)
 {
@@ -19,7 +23,7 @@ function init(levelNum)
     {
         case 1:
         {
-            theLevel = new LevelOne(500, 500, playerImage, 5460, 400);
+            theLevel = new LevelTwo(500, 500, playerImage, 5460, 400);
             break; 
         }
         case 2:
@@ -29,13 +33,11 @@ function init(levelNum)
         }
         case 3:
         {
-            theLevel = new LevelThree(500, 500, playerImage, 5460, 400);
+            theLevel = new LevelTwo(500, 500, playerImage, 5460, 400);
             break;
         }
     }
     
-    
-    //theLevel = new LevelOne(500, 500, playerImage, 5460, 400);
     theLevel.create();
 }
 
@@ -45,8 +47,9 @@ function animate()
 {
     requestAnimationFrame(animate);
     c.clearRect(0,0,innerWidth,innerHeight);
-    if(theLevel.checkIfFallen() == true) //this should be exported to a function in character class
+    if(theLevel.checkIfFallen() == true || theLevel.checkIfKilled() == true) //this should be exported to a function in character class
     {
+        //need to find a way to not stack audio things.
         init(levelNum);
     }
     

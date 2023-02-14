@@ -38,6 +38,10 @@ class BadGuyFactory
         for(let i = 0; i < this.badGuyArray.length; ++i)
         {
             this.badGuyArray[i].executeMoves();
+            if(this.badGuyArray[i].getY() >= 2000)
+            {
+                this.badGuyArray.splice(i, 1);
+            }
         }
     }
 
@@ -55,6 +59,11 @@ class BadGuyFactory
         {
             this.badGuyArray[i].die();
         }
+    }
+
+    getBadGuy(i)
+    {
+        return this.badGuyArray[i];
     }
 
 
