@@ -56,11 +56,14 @@ class LevelTwo extends Level
         {
             if(this.theBadGuyFactory.badGuyArray[i].getDeadBool() == true && this.theBadGuyFactory.badGuyArray[i].getSpawned() == false)
             {
-                this.theBadGuyFactory.createBadGuy("wasp.png", 1, window.innerWidth + 50, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
-                this.theBadGuyFactory.createBadGuy("wasp.png", 1, window.innerWidth + 250, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
-                this.theBadGuyFactory.createBadGuy("wasp.png", 1, window.innerWidth + 350, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
-                ++this.spawnCount;
-                this.theBadGuyFactory.badGuyArray[i].setSpawned(true);
+                if(this.spawnCount <= 25)
+                {
+                    this.theBadGuyFactory.createBadGuy("wasp.png", 1, window.innerWidth + 50, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
+                    this.theBadGuyFactory.createBadGuy("wasp.png", 1, window.innerWidth + 250, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
+                    //this.theBadGuyFactory.createBadGuy("wasp.png", 1, window.innerWidth + 350, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
+                    ++this.spawnCount;
+                    this.theBadGuyFactory.badGuyArray[i].setSpawned(true);
+                }
             }
         }
     }
