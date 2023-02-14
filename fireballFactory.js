@@ -3,12 +3,14 @@ class FireballFactory
     fireballArray;
     ourPlayer;
     thrownBool;
+    throwableImage;
 
-    constructor(player)
+    constructor(player, thePicture)
     {
         this.fireballArray = [];
         this.ourPlayer = player;
         this.thrownBool = false;
+        this.throwableImage = thePicture;
         
         window.addEventListener("keydown", this.shootFireball.bind(this));
         window.addEventListener("keyup", this.upHandler.bind(this));
@@ -33,7 +35,7 @@ class FireballFactory
         {
             x = this.ourPlayer.getX();
             y = this.ourPlayer.getY();
-            this.fireballArray.push(new Fireball(x + 75, y - 25));
+            this.fireballArray.push(new Fireball(x + 75, y - 25, this.throwableImage));
             console.log("new throwable!");
             this.thrownBool = true;
         }

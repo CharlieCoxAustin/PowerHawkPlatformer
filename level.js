@@ -7,11 +7,11 @@ class Level
     player;
     theBadGuyFactory;
 
-    constructor(playerX, playerY, playerImage, endingX, endingY)
+    constructor(playerX, playerY, playerImage, endingX, endingY, fireballPicture)
     {   
         this.player = new Character(playerX,playerY,0,0,playerImage);
         this.theBackgroundFactory = new BackgroundFactory(this.player);
-        this.theFireballFactory = new FireballFactory(this.player);
+        this.theFireballFactory = new FireballFactory(this.player, "charlieThrowableChickenWing-01.png");
         this.thePlatformFactory = new PlatformFactory(this.player);
         this.theVictoryBox = new VictoryBox(endingX, endingY, this.player);
         this.theBadGuyFactory = new BadGuyFactory(this.player); 

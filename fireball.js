@@ -7,14 +7,14 @@ class Fireball
     picture;
     sound;
     
-    constructor(x,y)
+    constructor(x,y, image)
     {
         this.fireXV = 25;
         this.fireYV = -10;
         this.fireX = x;
         this.fireY = y;
         this.picture = new Image();
-        this.picture.src = "charlieThrowableChickenWing-01.png";
+        this.picture.src = image;
         this.sound = new Audio();
         this.sound.src = "explosion.wav";
 
