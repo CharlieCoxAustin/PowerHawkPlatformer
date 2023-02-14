@@ -8,17 +8,24 @@ class FireballFactory
         this.fireballArray = [];
         this.ourPlayer = player
         
-        window.addEventListener("click", this.shootFireball.bind(this)
+        window.addEventListener("keydown", this.shootFireball.bind(this)
         //this.fireballArray.push(new Fireball(player.getX() + 125, player.getY() - 50));
         );
     }
 
-    shootFireball()
+    shootFireball(event)
     {
-        let x = this.ourPlayer.getX();
-        let y = this.ourPlayer.getY();
+        let x;
+        let y;
 
-        this.fireballArray.push(new Fireball(x + 75, y - 25));
+        if(event.key == "t")
+        {
+            x = this.ourPlayer.getX();
+            y = this.ourPlayer.getY();
+            this.fireballArray.push(new Fireball(x + 75, y - 25));
+            console.log("new throwable!");
+        }
+        
     }
 
     draw()
