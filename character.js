@@ -71,15 +71,14 @@ class Character{
         {
             this.roarFunction();
         }
-        //experimenting with no ground and only platforms.
+        
         if(this.onPlatform == false)
         {
             this.gravity();
         }
-        
         else if(this.onPlatform == true)
         {
-            
+            this.jumped = false;
         }
         else
         {
@@ -89,7 +88,7 @@ class Character{
 
         this.passiveMove();
 
-        if(this.y < 0)  //this keeps godzilla from leaving the top of the frame.
+        if(this.y < 0) //keeps player from leaving top of screen
         {
             this.y == 0;
             this.yVelocity = 0;
@@ -394,6 +393,7 @@ class Character{
             if(this.jumped == false)
             {
                 this.spaceBool = true;
+                //this.spaceFunction();
             }
             this.jumped = true;
         }
@@ -508,7 +508,7 @@ class Character{
 
     spaceFunction()
     {
-        if(this.Y <= 0)  //stops godzilla from leaving the top of the frame
+        if(this.Y <= 0)  
         {
             this.yVelocity == 0;
             this.Y == 0;
@@ -547,7 +547,7 @@ class Character{
             this.x += this.xVelocity;
         }
 
-        if(this.xVelocity != 0) //&& (this.leftBool == false && this.rightBool == false))
+        if(this.xVelocity != 0) 
         {
             if(this.xVelocity > 0)
             {
@@ -563,6 +563,8 @@ class Character{
         {
             this.jumped = false;
         }
+
+        console.log("player's YV = " + this.yVelocity);
     }
 
 

@@ -83,12 +83,14 @@ class Platform
     {
         let playerX = ourPlayer.getX() + 75;
         let playerY = ourPlayer.getY() + 130;
-        //let playerYVelocity = ourPlayer.getYVelocity();
+        let playerYV = ourPlayer.getYVelocity();
 
         if((playerX >= this.x && playerX <= this.x + this.length) && (playerY <= this.y + 8 && playerY >= this.y - 8))
         {
-            //console.log("He's on platform " + i + "!");
-            ourPlayer.setOnPlatform(true);
+            if(playerYV >= 0)
+            {
+                ourPlayer.setOnPlatform(true);
+            }
         }
         else
         {
