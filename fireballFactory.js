@@ -34,10 +34,10 @@ class FireballFactory
         for(let i = 0; i < this.fireballArray.length; ++i)
         {
             let currentX = this.fireballArray[i].getX();
-            if(currentX >= 2000)
+            if(currentX >= window.innerWidth + 50)
             {
                 this.fireballArray.splice(i, 1);
-                console.log("slicing throwable. throwables: " + this.fireballArray.length);
+                console.log("splicing throwables. throwables size: " + this.fireballArray.length);
             }
         }
     }
