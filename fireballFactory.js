@@ -28,4 +28,17 @@ class FireballFactory
             this.fireballArray[i].draw();
         }
     }
+
+    checkDistance()
+    {
+        for(let i = 0; i < this.fireballArray.length; ++i)
+        {
+            let currentX = this.fireballArray[i].getX();
+            if(currentX >= 2000)
+            {
+                this.fireballArray.splice(i, 1);
+                console.log("slicing throwable. throwables: " + this.fireballArray.length);
+            }
+        }
+    }
 }

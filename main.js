@@ -66,6 +66,7 @@ function animate()
     }
     player.executeMoves();
     theBadGuyFactory.executeMoves();
+    theFireballFactory.checkDistance();
     
     theBackgroundFactory.screenScroll();
     theVictoryBox.screenScroll();
@@ -89,7 +90,6 @@ function animate()
     }
 
     theBadGuyFactory.draw();
-    
     theBadGuyFactory.checkForDeath();
 }
 
