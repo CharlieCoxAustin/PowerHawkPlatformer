@@ -12,7 +12,7 @@ let theFireballFactory;
 let thePlatformFactory;
 let theVictoryBox;
 let player;
-let testBadGuy;
+let theBadGuyFactory;
 
 function init()
 {
@@ -50,7 +50,8 @@ function init()
 
     theVictoryBox = new VictoryBox(5460, 400, player);
 
-    testBadGuy = new BadGuy("wasp.png", 1, 2000, 300, 200, 200, player, theFireballFactory.fireballArray);
+    theBadGuyFactory = new BadGuyFactory(player);
+    theBadGuyFactory.createBadGuy("wasp.png", 1, 2000, 300, 200, 200, player, theFireballFactory.fireballArray);
 }
 
 init();
@@ -64,7 +65,7 @@ function animate()
         init();
     }
     player.executeMoves();
-    testBadGuy.executeMoves();
+    theBadGuyFactory.executeMoves();
     
     theBackgroundFactory.screenScroll();
     theVictoryBox.screenScroll();
@@ -87,9 +88,9 @@ function animate()
         player.draw();
     }
 
-    testBadGuy.draw();
+    theBadGuyFactory.draw();
     
-    testBadGuy.checkForDeath();
+    theBadGuyFactory.checkForDeath();
 }
 
 function victoryAnimate()
