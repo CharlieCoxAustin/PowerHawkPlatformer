@@ -90,8 +90,10 @@ class Character{
 
         if(this.y < 0) //keeps player from leaving top of screen
         {
-            this.y == 0;
-            this.yVelocity = 0;
+            if(this.yVelocity < 0)
+            {
+                this.yVelocity = 0;
+            }
         }
 
         if(this.onPlatform == true && this.yVelocity >= 0)
