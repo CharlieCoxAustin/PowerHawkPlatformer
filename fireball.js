@@ -3,12 +3,14 @@ class Fireball
     fireX;
     fireY;
     fireXV;
+    fireYV;
     picture;
     sound;
     
     constructor(x,y)
     {
-        this.fireXV = 15;
+        this.fireXV = 25;
+        this.fireYV = -10;
         this.fireX = x;
         this.fireY = y;
         this.picture = new Image();
@@ -24,6 +26,13 @@ class Fireball
     {
         c.drawImage(this.picture, this.fireX + this.fireXV, this.fireY, 125, 125);
         this.fireX += this.fireXV;
+        this.gravity();
+    }
+
+    gravity()
+    {
+        this.fireYV += 1;
+        this.fireY += this.fireYV;
     }
 
     setX(newX)

@@ -34,7 +34,8 @@ class FireballFactory
         for(let i = 0; i < this.fireballArray.length; ++i)
         {
             let currentX = this.fireballArray[i].getX();
-            if(currentX >= window.innerWidth + 50)
+            let currentY = this.fireballArray[i].getY();
+            if(currentX >= window.innerWidth + 50 || currentY >= window.innerHeight + 50)
             {
                 this.fireballArray.splice(i, 1);
                 console.log("splicing throwables. throwables size: " + this.fireballArray.length);
