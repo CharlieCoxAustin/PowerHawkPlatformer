@@ -108,7 +108,7 @@ class BadGuy
             
             if(fireballX >= this.x && fireballX <= this.x + this.width)
             {
-                if(fireballY >= this.y && fireballY <= this.y + this.height)
+                if(fireballY >= this.y + 25 && fireballY <= this.y + this.height)
                 {
                     if(this.deadBool == false)
                     {
