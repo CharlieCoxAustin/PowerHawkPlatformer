@@ -6,6 +6,7 @@ class Level
     theVictoryBox;
     player;
     theBadGuyFactory;
+    theTimer;
 
     constructor(playerX, playerY, playerImage, endingX, endingY)
     {   
@@ -15,6 +16,7 @@ class Level
         this.thePlatformFactory = new PlatformFactory(this.player);
         this.theVictoryBox = new VictoryBox(endingX, endingY, this.player);
         this.theBadGuyFactory = new BadGuyFactory(this.player); 
+        this.theTimer = new gameTimer(60);
     }
 
     create() //add all the stuff to the various containers
@@ -37,11 +39,13 @@ class Level
 
     draw() //have all the containers draw
     {
+        
         this.theBackgroundFactory.draw();
         this.thePlatformFactory.draw();
         this.theVictoryBox.draw();
         this.theBadGuyFactory.draw();
         this.theFireballFactory.draw();
+        this.theTimer.draw();
         this.player.draw();
     }
 

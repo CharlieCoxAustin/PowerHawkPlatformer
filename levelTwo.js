@@ -18,6 +18,7 @@ class LevelTwo extends Level
         this.theBadGuyFactory = new BadGuyFactory(this.player); 
         this.theVictoryBox = new VictoryBox(5460, 400, this.player);
         this.spawnCount = 0;
+        this.theTimer = new gameTimer(60);
         
     }
 
@@ -44,7 +45,10 @@ class LevelTwo extends Level
         this.thePlatformFactory.createPlatform(5200, 200, 150, 150);
         this.thePlatformFactory.createPlatform(5100, 700, 150, 150);
         this.thePlatformFactory.createPlatform(5400, 700, 250, 150);
-        this.theBadGuyFactory.createBadGuy("wasp.png", 1, 2000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createBadGuy("chicken-01.png", 1, 2000, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createBadGuy("chicken-01.png", 1, 3000, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createBadGuy("chicken-01.png", 1, 4000, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createBadGuy("chicken-01.png", 1, 5000, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBackgroundFactory.createBackground("desertBackground-01.png", 0, -100, 5500, 1100);
     
     }
@@ -58,9 +62,8 @@ class LevelTwo extends Level
             {
                 if(this.spawnCount <= 25)
                 {
-                    this.theBadGuyFactory.createBadGuy("wasp.png", 1, window.innerWidth + 50, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
-                    this.theBadGuyFactory.createBadGuy("wasp.png", 1, window.innerWidth + 250, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
-                    //this.theBadGuyFactory.createBadGuy("wasp.png", 1, window.innerWidth + 350, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
+                    this.theBadGuyFactory.createBadGuy("chicken-01.png", 1, window.innerWidth + 50, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
+                    this.theBadGuyFactory.createBadGuy("chicken-01.png", 1, window.innerWidth + 250, Math.random() * 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
                     ++this.spawnCount;
                     this.theBadGuyFactory.badGuyArray[i].setSpawned(true);
                 }

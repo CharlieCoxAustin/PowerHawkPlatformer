@@ -16,6 +16,7 @@ class LevelThree extends Level
         this.thePlatformFactory = new PlatformFactory(this.player);
         this.theBadGuyFactory = new BadGuyFactory(this.player); 
         this.theVictoryBox = new VictoryBox(5460, 400, this.player);
+        this.theTimer = new gameTimer(60);
         
     }
 
@@ -42,7 +43,7 @@ class LevelThree extends Level
         this.thePlatformFactory.createPlatform(5200, 200, 150, 150);
         this.thePlatformFactory.createPlatform(5100, 700, 150, 150);
         this.thePlatformFactory.createPlatform(5400, 700, 250, 150);
-        this.theBadGuyFactory.createBadGuy("wasp.png", 1, 2000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createBadGuy("chicken-01.png", 1, 2000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBackgroundFactory.createBackground("hauntedHouseBackground-01.png", 0, -100, 5500, 1100);
     
     }

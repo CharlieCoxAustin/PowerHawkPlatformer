@@ -103,7 +103,7 @@ class BadGuy
     {
         for(let i = 0; i < this.fireBallArray.length; ++i)
         {
-            let fireballX = this.fireBallArray[i].getX();
+            let fireballX = this.fireBallArray[i].getX() - 35;
             let fireballY = this.fireBallArray[i].getY() + 35;
             
             if(fireballX >= this.x && fireballX <= this.x + this.width)

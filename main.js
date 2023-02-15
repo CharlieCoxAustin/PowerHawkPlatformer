@@ -23,7 +23,7 @@ function init(levelNum)
     {
         case 1:
         {
-            theLevel = new LevelTwo(500, 500, playerImage, 5460, 400);
+            theLevel = new LevelOne(500, 500, playerImage, 5460, 400);
             break; 
         }
         case 2:
@@ -33,7 +33,7 @@ function init(levelNum)
         }
         case 3:
         {
-            theLevel = new LevelTwo(500, 500, playerImage, 5460, 400);
+            theLevel = new LevelThree(500, 500, playerImage, 5460, 400); 
             break;
         }
     }
