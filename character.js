@@ -29,6 +29,7 @@ class Character{
         this.characterSprite = new Image();
         this.characterSprite.src = csprite;
         this.roar = new Audio();
+        this.roar.volume = .1;
         this.roar.src = "godzilla.wav";
         this.music = new Audio();
         this.music.src="Booty Call Baseball.mp3";
@@ -419,6 +420,11 @@ class Character{
     setCharacterSprite(newSprite)
     {
         this.characterSprite = newSprite;
+    }
+
+    getFacingRight()
+    {
+        return this.facingRight;
     }
 
 

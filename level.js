@@ -95,10 +95,10 @@ class Level
         let currentY = this.player.getY() + 75;
         for(let i = 0; i < this.theBadGuyFactory.badGuyArray.length; ++i)
         {
-            let badGuyX = this.theBadGuyFactory.badGuyArray[i].getX() + 10;
-            let badGuyY = this.theBadGuyFactory.badGuyArray[i].getY() + 10;
+            let badGuyX = this.theBadGuyFactory.badGuyArray[i].getX() + 30;
+            let badGuyY = this.theBadGuyFactory.badGuyArray[i].getY() - 20;
             let badGuyHeight = this.theBadGuyFactory.badGuyArray[i].getHeight();
-            let badGuyWidth = this.theBadGuyFactory.badGuyArray[i].getWidth() - 30;
+            let badGuyWidth = this.theBadGuyFactory.badGuyArray[i].getWidth() - 50;
             console.log("bad guy x and y= " + badGuyX + " " + badGuyY);
             if(currentX >= badGuyX && currentX <= badGuyX + badGuyWidth)
             {

@@ -29,12 +29,14 @@ class FireballFactory
     {
         let x;
         let y;
+        let direction;
 
         if(event.key == "t" && this.thrownBool == false)
         {
             x = this.ourPlayer.getX();
             y = this.ourPlayer.getY();
-            this.fireballArray.push(new Fireball(x + 75, y - 25, this.throwableImage));
+            direction = this.ourPlayer.getFacingRight();
+            this.fireballArray.push(new Fireball(x + 75, y - 25, this.throwableImage, direction));
             console.log("new throwable!");
             this.thrownBool = true;
         }

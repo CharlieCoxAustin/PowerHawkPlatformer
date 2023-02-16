@@ -7,18 +7,27 @@ class Fireball
     picture;
     sound;
     angle;
+    directionBool;
     
-    constructor(x,y, image)
+    constructor(x,y, image, direction)
     {
-        this.fireXV = 25;
+        if(direction == true)
+        {
+            this.fireXV = 25;
+        }
+        else
+        {
+            this.fireXV = -25;
+        }
         this.fireYV = -10;
         this.fireX = x;
         this.fireY = y;
         this.picture = new Image();
         this.picture.src = image;
-        this.sound = new Audio();
-        this.sound.src = "explosion.wav";
+        this.sound = a;
+        //this.sound.src = "explosion.wav";
         this.angle = 1;
+        
 
         this.sound.volume = .1;
         this.sound.play();

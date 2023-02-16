@@ -17,6 +17,21 @@ class BadGuyFactory
         this.badGuyArray.push(new BadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs));
     }
 
+    createSmartBadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs)
+    {
+        this.badGuyArray.push(new SmartBadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs));
+    }
+
+    createFastBadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs)
+    {
+        this.badGuyArray.push(new FastBadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs));
+    }
+
+    createBreedingBadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs)
+    {
+        this.badGuyArray.push(new BreedingBadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs, this.badGuyArray));
+    }
+
     draw()
     {
         for(let i = 0; i < this.badGuyArray.length; ++i)

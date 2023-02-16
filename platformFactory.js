@@ -19,6 +19,11 @@ class PlatformFactory
         this.platformArray.push(new Platform(newX, newY, newLength, newHeight));
     }
 
+    createRockPlatform(newX, newY, newLength, newHeight)
+    {
+        this.platformArray.push(new RockPlatform(newX, newY, newLength, newHeight));
+    }
+
     draw()
     {
         for(let i = 0; i < this.platformArray.length; ++i)

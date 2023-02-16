@@ -5,6 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 c = canvas.getContext("2d");
 a = new Audio();
+a.src="explosion.wav";
 
 
 console.log("running");
@@ -50,6 +51,7 @@ function animate()
     if(theLevel.checkIfFallen() == true || theLevel.checkIfKilled() == true) //this should be exported to a function in character class
     {
         //need to find a way to not stack audio things.
+        cancelAnimationFrame(animate);
         init(levelNum);
     }
     
