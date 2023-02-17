@@ -20,7 +20,7 @@ class Platform
 
     draw()
     {
-        c.drawImage(this.thePicture,0,400,2100,1100, this.x, this.y, this.length, this.height);
+        c.drawImage(this.thePicture,0,400,2100,1600, this.x, this.y, this.length, this.height);
     }
 
     setX(newX)
@@ -81,11 +81,11 @@ class Platform
 
     checkForCollision(ourPlayer)
     {
-        let playerX = ourPlayer.getX() + 75;
+        let playerX = ourPlayer.getX() + 90;
         let playerY = ourPlayer.getY() + 130;
         let playerYV = ourPlayer.getYVelocity();
 
-        if((playerX >= this.x && playerX <= this.x + this.length) && (playerY <= this.y + 8 && playerY >= this.y - 8))
+        if((playerX >= this.x && playerX <= this.x + this.length + 25) && (playerY <= this.y + 8 && playerY >= this.y - 8))
         {
             if(playerYV >= 0)
             {

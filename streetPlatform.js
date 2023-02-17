@@ -1,10 +1,10 @@
-class RockPlatform extends Platform
+class StreetPlatform extends Platform
 {
     constructor(newX, newY, newLength, newHeight)
     {
         super(newX, newY, newLength, newHeight);
         this.thePicture = new Image();
-        this.thePicture.src = "rockPlatform-01.png";
+        this.thePicture.src = "streetPlatform-01.png";
     }
 
     draw()
