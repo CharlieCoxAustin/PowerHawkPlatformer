@@ -44,11 +44,11 @@ class LevelThree extends Level
         this.thePlatformFactory.createStreetPlatform(5100, 700, 150, 150);
         this.thePlatformFactory.createStreetPlatform(5400, 700, 250, 150);
         
-        this.theBadGuyFactory.createSmartBadGuy("chicken-01.png", 1, 2000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
-        this.theBadGuyFactory.createSmartBadGuy("chicken-01.png", 1, 1000, 500, 200, 200, this.player, this.theFireballFactory.fireballArray);
-        this.theBadGuyFactory.createSmartBadGuy("chicken-01.png", 1, 3000, 600, 200, 200, this.player, this.theFireballFactory.fireballArray);
-        this.theBadGuyFactory.createSmartBadGuy("chicken-01.png", 1, 4000, 200, 200, 200, this.player, this.theFireballFactory.fireballArray);
-        this.theBadGuyFactory.createSmartBadGuy("chicken-01.png", 1, 5000, 100, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createSmartBadGuy("chickenSpriteSheet-01.png", 1, 2000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createSmartBadGuy("chickenSpriteSheet-01.png", 1, 1000, 500, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createSmartBadGuy("chickenSpriteSheet-01.png", 1, 3000, 600, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createSmartBadGuy("chickenSpriteSheet-01.png", 1, 4000, 200, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createSmartBadGuy("chickenSpriteSheet-01.png", 1, 5000, 100, 200, 200, this.player, this.theFireballFactory.fireballArray);
 
         this.theBackgroundFactory.createBackground("cityBackground-01.png", 0, -100, 5500, 1100);
     

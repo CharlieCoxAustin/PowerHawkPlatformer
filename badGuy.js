@@ -14,6 +14,8 @@ class BadGuy
     fireBallArray;
     upBool;
     spawned;
+    currentFrame;
+    gameFrame;
 
     constructor(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs)
     {
@@ -32,11 +34,60 @@ class BadGuy
         this.fireBallArray = fireballs;
         this.upBool = false;
         this.spawned = false;
+        this.currentFrame = 0;
+        this.gameFrame = 0;
     }
 
     draw()
     {
-        c.drawImage(this.thePicture, this.x, this.y, this.width, this.height);
+
+        if(this.gameFrame == 4)
+        {
+            this.currentFrame++;
+            this.gameFrame = 0;
+        }
+        else
+        {
+            this.gameFrame++;
+        }
+
+        if(this.currentFrame >= 6)
+        {
+            this.currentFrame = 0;
+        }
+        switch(this.currentFrame)
+        {
+            case 0:
+            {
+                c.drawImage(this.thePicture, 0, 0, 298, 225, this.x, this.y, this.width, this.height);
+                break;
+            }
+            case 1:
+            {
+                c.drawImage(this.thePicture, 299, 0, 298, 225,this.x, this.y, this.width, this.height);
+                break;
+            }
+            case 2:
+            {
+                c.drawImage(this.thePicture, 597, 0, 298, 225, this.x, this.y, this.width, this.height);
+                break;
+            }
+            case 3:
+            {
+                c.drawImage(this.thePicture, 895, 0, 298, 225, this.x, this.y, this.width, this.height);
+                break;
+            }
+            case 4:
+            {
+                c.drawImage(this.thePicture, 597, 0, 298, 225, this.x, this.y, this.width, this.height);
+                break;
+            }
+            case 5:
+            {
+                c.drawImage(this.thePicture, 299, 0, 298, 225, this.x, this.y, this.width, this.height);
+                break;
+            }
+        }
     }
 
     hover()
