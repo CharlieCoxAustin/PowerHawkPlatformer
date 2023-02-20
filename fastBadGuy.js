@@ -60,7 +60,7 @@ class FastBadGuy extends BadGuy
     draw()
     {
 
-        if(this.gameFrame == 4)
+        if(this.gameFrame == 1)
         {
             this.currentFrame++;
             this.gameFrame = 0;

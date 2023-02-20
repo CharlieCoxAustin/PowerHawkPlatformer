@@ -48,7 +48,7 @@ class BreedingBadGuy extends BadGuy
             if(this.hasBred == false)
             {
                 this.hasBred = true;
-                this.badGuyArray.push(new FastBadGuy("chickenSpriteSheet-01.png", this.hitPoints, -150, Math.random() * 700, this.width, this.height, this.ourPlayer, this.fireBallArray));
+                this.badGuyArray.push(new FastBadGuy("mosquitoSpriteSheet-01.png", this.hitPoints, -150, Math.random() * 700, this.width, this.height, this.ourPlayer, this.fireBallArray));
                 this.badGuyArray.push(new SmartBadGuy("chickenSpriteSheet-01.png", this.hitPoints, window.innerWidth +50, Math.random() * 700, this.width, this.height, this.ourPlayer, this.fireBallArray));
                 this.badGuyArray.push(new BreedingBadGuy("chickenSpriteSheet-01.png", this.hitPoints, window.innerWidth +50, Math.random() * 700, this.width, this.height, this.ourPlayer, this.fireBallArray, this.badGuyArray));
             }
