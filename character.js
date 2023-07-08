@@ -562,7 +562,7 @@ class Character{
         }
         else
         {
-            this.yVelocity -= 22;
+            this.yVelocity = -22;//this.yVelocity -= 22;
             this.y += this.yVelocity;
         }
         this.spaceBool = false;
