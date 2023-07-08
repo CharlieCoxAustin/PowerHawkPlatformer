@@ -43,10 +43,10 @@ class LevelFour extends Level
         this.thePlatformFactory.createPlatform(5200, 200, 150, 150);
         this.thePlatformFactory.createPlatform(5100, 700, 150, 150);
         this.thePlatformFactory.createPlatform(5400, 700, 250, 150);
-        this.theBadGuyFactory.createSmartBadGuy("chickenSpriteSheet-01.png", 1, 1000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
-        this.theBadGuyFactory.createSmartBadGuy("chickenSpriteSheet-01.png", 1, 2000, 100, 200, 200, this.player, this.theFireballFactory.fireballArray);
-        this.theBadGuyFactory.createSmartBadGuy("chickenSpriteSheet-01.png", 1, 3000, 500, 200, 200, this.player, this.theFireballFactory.fireballArray);
-        this.theBadGuyFactory.createSmartBadGuy("chickenSpriteSheet-01.png", 1, 4000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 1000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 2000, 100, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 3000, 500, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 4000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 5000, 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
         
         

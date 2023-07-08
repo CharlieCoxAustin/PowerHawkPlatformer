@@ -22,18 +22,16 @@ class LevelThree extends Level
 
     create()
     {
-        this.thePlatformFactory.createStreetPlatform(1100, 600, 150, 150);
         this.thePlatformFactory.createStreetPlatform(1200, 400, 150, 150);
         this.thePlatformFactory.createStreetPlatform(300, 700, 850, 250);
         this.thePlatformFactory.createStreetPlatform(1500, 700, 850, 150);
         this.thePlatformFactory.createStreetPlatform(2500, 400, 150, 150);
-        this.thePlatformFactory.createStreetPlatform(2800, 200, 350, 150);
+        this.thePlatformFactory.createStreetPlatform(2800, 500, 350, 150);
         this.thePlatformFactory.createStreetPlatform(3200, 700, 150, 150);
         this.thePlatformFactory.createStreetPlatform(3100, 200, 150, 150);
         this.thePlatformFactory.createStreetPlatform(3400, 300, 150, 150);
         this.thePlatformFactory.createStreetPlatform(3500, 700, 450, 150);
         this.thePlatformFactory.createStreetPlatform(3800, 200, 150, 150);
-        this.thePlatformFactory.createStreetPlatform(3900, 700, 150, 150);
         this.thePlatformFactory.createStreetPlatform(4100, 200, 150, 150);
         this.thePlatformFactory.createStreetPlatform(4200, 700, 150, 150);
         this.thePlatformFactory.createStreetPlatform(4500, 200, 150, 150);
