@@ -37,6 +37,51 @@ function init(levelNum)
             theLevel = new LevelThree(500, 500, playerImage, 5460, 400); 
             break;
         }
+        case 4:
+        {
+            theLevel = new LevelFour(500, 500, playerImage, 5460, 400); 
+            break;
+        }
+        case 5:
+        {
+            theLevel = new LevelFive(500, 500, playerImage, 5460, 400); 
+            break;
+        }  
+        case 6:
+        {
+            theLevel = new LevelSix(500, 500, playerImage, 5460, 400); 
+            break;
+        }
+        case 7:
+        {
+            theLevel = new LevelSeven(500, 500, playerImage, 5460, 400); 
+            break;
+        }
+        case 8:
+        {
+            theLevel = new LevelEight(500, 500, playerImage, 5460, 400); 
+            break;
+        }
+        case 9:
+        {
+            theLevel = new LevelNine(500, 500, playerImage, 5460, 400); 
+            break;
+        } 
+        case 10:
+        {
+            theLevel = new LevelTen(500, 500, playerImage, 5460, 400); 
+            break;
+        } 
+        case 11:
+        {
+            theLevel = new LevelEleven(500, 500, playerImage, 5460, 400); 
+            break;
+        } 
+        case 12:
+        {
+            theLevel = new LevelTwelve(500, 500, playerImage, 5460, 400); 
+            break;
+        }         
     }
     
     theLevel.create();
@@ -63,7 +108,7 @@ function animate()
     if(theLevel.checkForVictory())
     {
         levelNum++;
-        if(levelNum >= 4)
+        if(levelNum >= 13) //if the level number is higher than the number of levels, it restarts.
         {
             levelNum = 1;
         }
