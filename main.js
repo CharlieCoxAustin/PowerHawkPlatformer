@@ -13,7 +13,7 @@ console.log("width and height: " + window.innerWidth + " " + window.innerHeight)
 console.log(canvas);
 
 let theLevel;
-let levelNum = 4;
+let levelNum = 1;
 let newLevel;
 
 function init(levelNum)
@@ -108,7 +108,7 @@ function animate()
     if(theLevel.checkForVictory())
     {
         levelNum++;
-        if(levelNum >= 13) //if the level number is higher than the number of levels, it restarts.
+        if(levelNum >= 7) //if the level number is higher than the number of levels, it restarts.
         {
             levelNum = 1;
         }

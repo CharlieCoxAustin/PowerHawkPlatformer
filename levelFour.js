@@ -15,7 +15,7 @@ class LevelFour extends Level
         this.theFireballFactory = new FireballFactory(this.player, "joeThrowableBaseballBat-01.png");
         this.thePlatformFactory = new PlatformFactory(this.player);
         this.theBadGuyFactory = new BadGuyFactory(this.player); 
-        this.theVictoryBox = new VictoryBox(5460, 400, this.player);
+        this.theVictoryBox = new VictoryBox(5400, 450, this.player);
         this.theTimer = new gameTimer(60);
         
     }
@@ -48,14 +48,12 @@ class LevelFour extends Level
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 3000, 500, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 4000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 5000, 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
-
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 6000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 7000, 100, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 8000, 500, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 9000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 10000, 700, 200, 200, this.player, this.theFireballFactory.fireballArray);
-
-        this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 1100, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
+        this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 11000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 12000, 100, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 13000, 500, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createFastBadGuy("mosquitoSpriteSheet-01.png", 1, 14000, 300, 200, 200, this.player, this.theFireballFactory.fireballArray);
