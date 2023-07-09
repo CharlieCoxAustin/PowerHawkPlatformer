@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:/Users/Charlie/OneDrive/Desktop/WebDev Practice/PowerHawkPlatformer/PowerHawkPlatformerREPO/PowerHawkPlatformer/index.html",
+            "url": "C:/Users/charl/OneDrive/Desktop/webDevPractice/PowerHawkPlatformer/PowerHawkPlatformer/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

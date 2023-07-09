@@ -1,8 +1,9 @@
 canvas{
     background-color:rgb(0, 0, 0);
     position: absolute;
-    top: 5vw;
+    top: 3vw;
     left: 3vw;
+    bottom: 0vw;
 }
 
 body{

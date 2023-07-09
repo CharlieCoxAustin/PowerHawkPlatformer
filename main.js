@@ -2,7 +2,7 @@
 
 var canvas = document.querySelector("canvas");
 canvas.width = window.innerWidth - 150;
-canvas.height = window.innerHeight - 150;
+canvas.height = window.innerHeight - 30;
 c = canvas.getContext("2d");
 a = new Audio();
 a.src="explosion.wav";
