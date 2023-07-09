@@ -35,6 +35,7 @@ class LevelOne extends Level
         this.thePlatformFactory.createStreetPlatform(5100, 700, 150, 150);
         this.thePlatformFactory.createStreetPlatform(5400, 700, 250, 150);
         this.theBackgroundFactory.createBackground("cityBackground-01.png", 0, -100, 5500, 1100);
+        this.theBackgroundFactory.createFloatingObject("doubleJump-01.png", 1200, 300, 350, 250);
     
     }
 

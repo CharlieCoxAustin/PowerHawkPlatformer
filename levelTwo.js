@@ -50,6 +50,7 @@ class LevelTwo extends Level
         this.theBadGuyFactory.createBadGuy("chickenSpriteSheet-01.png", 1, 4000, Math.random() * 500, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBadGuyFactory.createBadGuy("chickenSpriteSheet-01.png", 1, 5000, Math.random() * 500, 200, 200, this.player, this.theFireballFactory.fireballArray);
         this.theBackgroundFactory.createBackground("cityBackground-01.png", 0, -100, 5500, 1100);
+        this.theBackgroundFactory.createFloatingObject("throwStuff-01.png", 1800, 150, 450, 550);
     
     }
 

@@ -13,7 +13,7 @@ console.log("width and height: " + window.innerWidth + " " + window.innerHeight)
 console.log(canvas);
 
 let theLevel;
-let levelNum = 1;
+let levelNum = 2;
 let newLevel;
 
 function init(levelNum)

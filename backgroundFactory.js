@@ -37,4 +37,9 @@ class BackgroundFactory{
         this.backGroundArray.push(newBackground);
     }
 
+    createFloatingObject(aPicture, x, y, w, h)
+    {
+        this.backGroundArray.push(new FloatingObject(aPicture, x, y, w, h));
+    }
+
 }
