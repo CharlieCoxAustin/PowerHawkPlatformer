@@ -95,23 +95,28 @@ class Level
         let currentY = this.player.getY();
         for(let i = 0; i < this.theBadGuyFactory.badGuyArray.length; ++i)
         {
-            let badGuyX = this.theBadGuyFactory.badGuyArray[i].getX() - 55;
-            let badGuyY = this.theBadGuyFactory.badGuyArray[i].getY() - 50;
+            let badGuyX = this.theBadGuyFactory.badGuyArray[i].getX();
+            let badGuyY = this.theBadGuyFactory.badGuyArray[i].getY();
             let badGuyHeight = this.theBadGuyFactory.badGuyArray[i].getHeight();
             let badGuyWidth = this.theBadGuyFactory.badGuyArray[i].getWidth();
             
-            if(currentX >= badGuyX && currentX <= badGuyX + badGuyWidth)
+            if(!this.theBadGuyFactory.badGuyArray[i].getDeadBool())
             {
-                if(currentY >= badGuyY && currentY <= badGuyY + badGuyHeight)
+                if(currentX >= badGuyX - 25 && currentX <= badGuyX + badGuyWidth - 50)
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    if(currentY >= badGuyY - 25 && currentY <= badGuyY + badGuyHeight - 25)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
         }
+
+        //return false;
         
 
     }
