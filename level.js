@@ -102,7 +102,7 @@ class Level
             
             if(!this.theBadGuyFactory.badGuyArray[i].getDeadBool())
             {
-                if(currentX >= badGuyX - 25 && currentX <= badGuyX + badGuyWidth - 50)
+                if(currentX >= badGuyX - 25 && currentX <= badGuyX + badGuyWidth - 125)
                 {
                     if(currentY >= badGuyY - 25 && currentY <= badGuyY + badGuyHeight - 25)
                     {
