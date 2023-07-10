@@ -32,6 +32,11 @@ class BadGuyFactory
         this.badGuyArray.push(new BreedingBadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs, this.badGuyArray));
     }
 
+    createRangedBadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs)
+    {
+        this.badGuyArray.push(new RangedBadGuy(picture, hp, xValue, yValue, newWidth, newHeight, player, fireballs));
+    }
+
     draw()
     {
         for(let i = 0; i < this.badGuyArray.length; ++i)

@@ -154,14 +154,14 @@ class BadGuy
     {
         for(let i = 0; i < this.fireBallArray.length; ++i)
         {
-            let fireballX = this.fireBallArray[i].getX() - 35;
-            let fireballY = this.fireBallArray[i].getY() + 35;
+            let fireballX = this.fireBallArray[i].getX();
+            let fireballY = this.fireBallArray[i].getY();
             
-            if(fireballX >= this.x && fireballX <= this.x + this.width)
+            if(fireballX >= this.x + 25 && fireballX <= this.x + this.width - 25)
             {
-                if(fireballY >= this.y + 25 && fireballY <= this.y + this.height)
+                if(fireballY >= this.y + 50 && fireballY <= this.y + this.height)
                 {
-                    if(this.deadBool == false)
+                    if(this.deadBool == false && !this.fireBallArray[i].getEvilBool())
                     {
                         this.deadBool = true;
                         this.fireBallArray[i].setXV(-5);

@@ -11,7 +11,7 @@ class LevelTwo extends Level
     constructor(playerX, playerY, playerImage, endingX, endingY)
     {
         super(playerX, playerY, playerImage, endingX, endingY);
-        this.player = new Character(500,500,0,0,"joeSpriteSheet-01.png");
+        this.player = new Character(500,300,0,0,"joeSpriteSheet-01.png");
         this.theBackgroundFactory = new BackgroundFactory(this.player);
         this.theFireballFactory = new FireballFactory(this.player, "joeThrowableBaseballBat-01.png");
         this.thePlatformFactory = new PlatformFactory(this.player);
@@ -26,7 +26,7 @@ class LevelTwo extends Level
     {
         
         this.thePlatformFactory.createStreetPlatform(1200, 400, 150, 150);
-        this.thePlatformFactory.createStreetPlatform(300, 700, 850, 250);
+        this.thePlatformFactory.createStreetPlatform(300, 600, 850, 250);
         this.thePlatformFactory.createStreetPlatform(1500, 700, 850, 150);
         this.thePlatformFactory.createStreetPlatform(2500, 400, 150, 150);
         this.thePlatformFactory.createStreetPlatform(2800, 500, 350, 150);

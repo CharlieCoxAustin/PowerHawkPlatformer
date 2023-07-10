@@ -78,7 +78,7 @@ class Level
 
     checkIfFallen() //check to see if player is dead
     {
-        if(this.player.checkIfFallen() == true)
+        if(this.player.checkIfFallen(this.theFireballFactory) == true)
         {
             return true;
         }
@@ -90,16 +90,16 @@ class Level
 
     checkIfKilled()
     {
-        console.log("check if killed: ");
-        let currentX = this.player.getX() + 75;
-        let currentY = this.player.getY() + 75;
+        
+        let currentX = this.player.getX();
+        let currentY = this.player.getY();
         for(let i = 0; i < this.theBadGuyFactory.badGuyArray.length; ++i)
         {
-            let badGuyX = this.theBadGuyFactory.badGuyArray[i].getX() + 30;
-            let badGuyY = this.theBadGuyFactory.badGuyArray[i].getY() - 20;
+            let badGuyX = this.theBadGuyFactory.badGuyArray[i].getX() - 55;
+            let badGuyY = this.theBadGuyFactory.badGuyArray[i].getY() - 50;
             let badGuyHeight = this.theBadGuyFactory.badGuyArray[i].getHeight();
-            let badGuyWidth = this.theBadGuyFactory.badGuyArray[i].getWidth() - 50;
-            console.log("bad guy x and y= " + badGuyX + " " + badGuyY);
+            let badGuyWidth = this.theBadGuyFactory.badGuyArray[i].getWidth();
+            
             if(currentX >= badGuyX && currentX <= badGuyX + badGuyWidth)
             {
                 if(currentY >= badGuyY && currentY <= badGuyY + badGuyHeight)
@@ -112,7 +112,7 @@ class Level
                 }
             }
         }
-        console.log("currentX and Y = " + currentX + " " + currentY);
+        
 
     }
 

@@ -14,7 +14,7 @@ class FastBadGuy extends BadGuy
         let playerYLocation = this.ourPlayer.getY();
         if(playerXLocation >= this.x)
         {
-            this.x -= (this.xVelocity - 3);
+            this.x -= (this.xVelocity - 2);
             this.facingRight = true;
         }
         else if(playerXLocation < this.x)
@@ -25,11 +25,11 @@ class FastBadGuy extends BadGuy
 
         if(playerYLocation >= this.originalY)
         {
-            this.originalY += 1;
+            this.originalY += 2;
         }
         else if(playerYLocation < this.originalY)
         {
-            this.originalY -= 1;
+            this.originalY -= 2;
         }
 
         let playerX = this.ourPlayer.getXVelocity();

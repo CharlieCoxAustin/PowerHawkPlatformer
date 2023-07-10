@@ -64,4 +64,9 @@ class FireballFactory
             }
         }
     }
+
+    getFireBallArray()
+    {
+        return this.fireballArray;
+    }
 }

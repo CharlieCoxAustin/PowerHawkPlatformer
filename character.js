@@ -612,8 +612,30 @@ class Character{
         }
     }
 
-    checkIfFallen()
+    checkIfFallen(fireBallFactory)
     {
+        //this first bit isn't checking if fallen, it's checking to see if the player was killed by a fireball,
+        //but it's a lot easier to put both of these things within the same function for the sake of execution.
+        let fireBallArray = fireBallFactory.getFireBallArray();
+
+        for(let i = 0; i < fireBallArray.length; ++i)
+        {
+            let fireballX = fireBallArray[i].getX();
+            let fireballY = fireBallArray[i].getY();
+            
+            if(fireBallArray[i].getEvilBool() == true)
+            {
+                if(fireballX >= this.x && fireballX <= this.x + 75)
+                {
+                    if(fireballY >= this.y && fireballY <= this.y + 150)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+
+
         if(this.y >= 1000)
         {
             return true;
@@ -622,6 +644,8 @@ class Character{
         {
             return false;
         }
+        
+        
     }
 
 
